@@ -1,0 +1,55 @@
+body {
+  background-color: #333;
+}
+
+.leaf {
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-bottom-right-radius: 5rem;
+  border-top-left-radius: 5rem;
+  z-index: 0;
+
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.yellow {
+  background-color: #f3ac3a;
+  /* transform: translate(-0%, -50%); */
+  animation-name: move_yellow;
+  z-index: 3;
+}
+.lime {
+  z-index: 2;
+  background-color: #998235;
+  animation-name: move_lime;
+  /* transform: translate(-25%, -50%); */
+}
+.green {
+  z-index: 1;
+  background-color: #1a4341;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes move_lime {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(-25%, -50%);
+  }
+}
+
+@keyframes move_yellow {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(-0%, -50%);
+  }
+}
