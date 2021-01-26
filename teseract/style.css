@@ -1,0 +1,84 @@
+body {
+  background-color: #333;
+  z-index: 0;
+}
+
+.background_rectangle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* width: 100vw; */
+  animation-name: move_background_rectangle;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  height: 20vh;
+  transform: translate(-50%, -50%);
+  background-color: #4caab3;
+  z-index: 1;
+}
+@keyframes move_background_rectangle {
+  0% {
+    width: 50vw;
+  }
+  100% {
+    width: 100vw;
+  }
+}
+.background_square {
+  z-index: 2;
+  width: 70vw;
+  height: 70vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.rotate_square {
+  background-color: #333;
+  width: 100%;
+  height: 100%;
+  transform: rotate(45deg);
+  z-index: 4;
+}
+.blue_center_square {
+  position: absolute;
+  z-index: 5;
+  width: 50vw;
+  height: 50vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.rotate_blue_square {
+  background-color: #4caab3;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  animation-name: move_blue_square;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  /* transform: rotate(45deg); */
+}
+
+@keyframes move_blue_square {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+.circle {
+  background-color: #333;
+  width: 15vw;
+  height: 15vw;
+  z-index: 6;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
